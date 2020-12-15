@@ -9,9 +9,9 @@
 
 The project `mix-fdr` is the final project of MATH 5472. It aims to
 investigate mixfdr, an empirical Bayes method for estimating fdr and
-effect size simultaneouly purposed by this paper: Omkar Muralidharan. An
-empirical bayes mixture method for effect size and false discovery rate
-estimation. Ann. Appl. Stat. 2010.
+effect size simultaneouly purposed by this paper: *Omkar Muralidharan.
+An empirical bayes mixture method for effect size and false discovery
+rate estimation. Ann. Appl. Stat. 2010.*
 
 ## Enviromnent
 
@@ -26,27 +26,32 @@ sessionInfo()
 #> Matrix products: default
 #> 
 #> locale:
-#> [1] LC_COLLATE=Chinese (Simplified)_China.936  LC_CTYPE=Chinese (Simplified)_China.936    LC_MONETARY=Chinese (Simplified)_China.936
-#> [4] LC_NUMERIC=C                               LC_TIME=Chinese (Simplified)_China.936    
+#> [1] LC_COLLATE=Chinese (Simplified)_China.936 
+#> [2] LC_CTYPE=Chinese (Simplified)_China.936   
+#> [3] LC_MONETARY=Chinese (Simplified)_China.936
+#> [4] LC_NUMERIC=C                              
+#> [5] LC_TIME=Chinese (Simplified)_China.936    
 #> 
 #> attached base packages:
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
-#> other attached packages:
-#> [1] locfdr_1.1-8
-#> 
 #> loaded via a namespace (and not attached):
-#>  [1] compiler_4.0.2  magrittr_1.5    htmltools_0.5.0 tools_4.0.2     yaml_2.2.1      splines_4.0.2   stringi_1.5.3   rmarkdown_2.3  
-#>  [9] knitr_1.29      stringr_1.4.0   xfun_0.17       digest_0.6.25   rlang_0.4.7     evaluate_0.14
+#>  [1] compiler_4.0.2  magrittr_1.5    tools_4.0.2     htmltools_0.5.0
+#>  [5] yaml_2.2.1      stringi_1.5.3   rmarkdown_2.3   knitr_1.29     
+#>  [9] stringr_1.4.0   xfun_0.17       digest_0.6.25   rlang_0.4.7    
+#> [13] evaluate_0.14
 ```
 
-To run the simulation code, we first need the following the packages
-that provide various empirical Bayes method.
+To run the simulation code, we first need the following packages that
+provide various empirical Bayes method.
 
 ``` r
 install.packages("locfdr")
 install.packages("EBayesThresh")
 ```
+
+Package `spline` may also need to be loaded before running the
+simulation code.
 
 ## Content of codes
 
@@ -75,7 +80,7 @@ the `sim_fdr.R`
 
   - `N_null = 50` : the original setting in the paper, corresponds to
     figure 2
-  - `N_null = 200` : the dense setting on effect size, correspondd to
+  - `N_null = 100` : the dense setting on effect size, correspondd to
     figure 3
 
 Then source the script. A small example is that when we set the follwing
@@ -84,7 +89,7 @@ parameters in the code
 ``` r
 n_rep = 100
 N = 1000
-N_null = 200
+N_null = 100
 J = 3
 ```
 

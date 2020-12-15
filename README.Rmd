@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The project `mix-fdr` is the final project of MATH 5472. It aims to investigate mixfdr, an empirical Bayes method for estimating fdr and effect size simultaneouly purposed by this paper: Omkar Muralidharan. An empirical bayes mixture method for effect size and false discovery rate estimation. Ann. Appl. Stat. 2010.
+The project `mix-fdr` is the final project of MATH 5472. It aims to investigate mixfdr, an empirical Bayes method for estimating fdr and effect size simultaneouly purposed by this paper: *Omkar Muralidharan. An empirical bayes mixture method for effect size and false discovery rate estimation. Ann. Appl. Stat. 2010.*
 
 
 ## Enviromnent
@@ -26,12 +26,13 @@ The R code is developed in R version 4.0.2.
 sessionInfo()
 ```
 
-To run the simulation code, we first need the following the packages that provide various empirical Bayes method.
+To run the simulation code, we first need the following packages that provide various empirical Bayes method.
 
 ```{r, eval=FALSE}
 install.packages("locfdr")
 install.packages("EBayesThresh")
 ```
+Package `spline` may also need to be loaded before running the simulation code.
 
 ## Content of codes
 * `mixfdr_fun.R`: containts various functions that implemented the mixfdr algorithm
@@ -53,13 +54,13 @@ source("sim_effect_sz.R")
 To reproduce Figure 2, 3, we need to set different values on `N_null` in the `sim_fdr.R`
 
 * `N_null = 50` : the original setting in the paper, corresponds to figure 2
-* `N_null = 200` : the dense setting on effect size, correspondd to figure 3
+* `N_null = 100` : the dense setting on effect size, correspondd to figure 3
 
 Then source the script. A small example is that when we set the follwing parameters in the code
 ```{r, eval=FALSE}
 n_rep = 100
 N = 1000
-N_null = 200
+N_null = 100
 J = 3
 ```
 
