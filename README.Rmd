@@ -55,8 +55,16 @@ To reproduce Figure 2, 3, we need to set different values on `N_null` in the `si
 * `N_null = 50` : the original setting in the paper, corresponds to figure 2
 * `N_null = 200` : the dense setting on effect size, correspondd to figure 3
 
-Then source the script:
+Then source the script. A small example is that when we set the follwing parameters in the code
 ```{r, eval=FALSE}
+n_rep = 100
+N = 1000
+N_null = 200
+J = 3
+```
+
+The code will output the Figure 3 in the report:
+```{r, plot-fdr, warning=FALSE}
 source("sim_fdr.R")
 ```
 
